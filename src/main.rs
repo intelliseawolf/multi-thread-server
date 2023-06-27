@@ -20,6 +20,5 @@ fn handle_connection(mut stream: TcpStream) {
         .map(|result| result.unwrap())
         .take_while(|line| !line.is_empty())
         .collect();
-
     println!("Request: {:#?}", http_request);
 }
